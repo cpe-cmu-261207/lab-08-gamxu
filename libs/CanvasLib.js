@@ -18,6 +18,7 @@ const CanvasLib = {
   },
 
   createRandomCanvas: () => {
+    const a = []
     const colors = [
       "#000000",
       "#804000",
@@ -32,6 +33,13 @@ const CanvasLib = {
       "#B100FE",
       "#FF006E",
     ];
+    for(let i = 0; i < 16; i++){
+      a.push([]);
+      for(let j = 0; j < 16; j++){
+        a[i].push(colors[Math.floor(Math.random() * colors.length)]) 
+      }
+    }
+    return a;
   },
 };
 
